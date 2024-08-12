@@ -2,20 +2,44 @@
 <html lang="en">
 
 <head>
+    <style>
+        body {
+            background-image: url("mars.gif");
+            background-position: center;
+            background-size: cover;
+        }
+
+        #myCanvas {
+            margin-top: 30px;
+            border-width: 10px;
+            background-color: white;
+            border-style: ridge;
+        }
+
+        h1,
+        h4 {
+            color: white !important;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canvas</title>
+    <title>Controlando a Rover perseverance</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="fondo">
+<body onload="cargar()">
     <center>
-        <h1>Mi primer lienzo</h1>
-        <canvas id="myCanvas" width="800" height="600"></canvas>
-        <br>
-        <button onclick="Borrar()">Borrar</button>
-        <br>
-        color <input type="text" id="color">
+        <h1>mueve el explorador de marte</h1>
+        <canvas width="800" height="600" id="myCanvas"></canvas>
+        <h4>
+            <b>nota </b>si no se ve el explorador presiona cualquier flecha
+        </h4>
     </center>
     <script src="main.js"></script>
 </body>
